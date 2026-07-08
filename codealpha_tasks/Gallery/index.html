@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+</head>  
+<body>
+
+    <div class="page">
+        <header class="header">
+            <h1>Responsive Image Gallery</h1>
+            <p class="subtitle">Browse by category or tap any image to view fullscreen</p>
+        </header>
+
+        <nav class="filter-buttons" aria-label="Gallery categories">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="city">City</button>
+            <button class="filter-btn" data-filter="animals">Animals</button>
+        </nav>
+
+        <main class="gallery" role="list">
+
+            <article class="gallery-item nature" role="listitem" data-category="Nature">
+                <img src="https://picsum.photos/id/1015/600/400" alt="Mountain lake at sunrise" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">Nature</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+            <article class="gallery-item city" role="listitem" data-category="City">
+                <img src="https://picsum.photos/id/1011/600/400" alt="City waterfront skyline" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">City</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+            <article class="gallery-item animals" role="listitem" data-category="Animals">
+                <img src="https://picsum.photos/id/1025/600/400" alt="Dog portrait outdoors" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">Animals</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+            <article class="gallery-item nature" role="listitem" data-category="Nature">
+                <img src="https://picsum.photos/id/1039/600/400" alt="Forest path in autumn" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">Nature</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+            <article class="gallery-item city" role="listitem" data-category="City">
+                <img src="https://picsum.photos/id/1043/600/400" alt="Urban architecture detail" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">City</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+            <article class="gallery-item animals" role="listitem" data-category="Animals">
+                <img src="https://picsum.photos/id/1074/600/400" alt="Puppy on grass" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">Animals</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+            <article class="gallery-item nature" role="listitem" data-category="Nature">
+                <img src="https://picsum.photos/id/1084/600/400" alt="Coastal cliffs and ocean" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">Nature</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+            <article class="gallery-item city" role="listitem" data-category="City">
+                <img src="https://picsum.photos/id/1060/600/400" alt="City street at night" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">City</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+            <article class="gallery-item animals" role="listitem" data-category="Animals">
+                <img src="https://picsum.photos/id/237/600/400" alt="Black dog close-up" loading="lazy">
+                <div class="overlay">
+                    <span class="category-tag">Animals</span>
+                    <span class="view-icon" aria-hidden="true">&#128065;</span>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+        <button class="lightbox-close" aria-label="Close viewer">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+
+        <figure class="lightbox-content">
+            <img class="lightbox-image" src="" alt="">
+            <figcaption class="lightbox-caption">
+                <span class="lightbox-category"></span>
+                <span class="lightbox-counter"></span>
+            </figcaption>
+        </figure>
+
+        <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
